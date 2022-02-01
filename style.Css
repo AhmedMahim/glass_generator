@@ -161,7 +161,8 @@ input[type=radio]:checked~label {
     width: 50%;
     display: flex;
     border-radius: 5px;
-    overflow: hidden
+    position: relative;
+    overflow: hidden;
 }
 
 .card {
@@ -182,8 +183,7 @@ input[type=radio]:checked~label {
     z-index: 1
 }
 
-.output::before {
-    content: 'GLASSMORPHISME';
+.output_overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -192,7 +192,7 @@ input[type=radio]:checked~label {
     font-size: 65px;
     font-weight: 900;
     letter-spacing: 3px;
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, .2)
 }
 
@@ -334,4 +334,28 @@ input[type=radio]:checked~label {
     background-color: rgba(255, 255, 255, .1);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, .125)
+}
+
+@media screen and (max-width: 1024px) {
+    main{
+        flex-wrap: wrap;
+    }    
+    .parameters,
+    .output{
+        width: calc(50% - 1rem);
+    }
+    .code{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }    
+    .parameters,
+    .output,
+    .code{
+        width: 100%;
+    }
 }
