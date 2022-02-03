@@ -199,7 +199,7 @@ input[type=radio]:checked~label {
 .profile {
     width: 100px;
     height: 100px;
-    background-image: url(./profile.jpg);
+    background-image: url(../assets/profile.jpg);
     background-size: cover;
     background-position: center top;
     border-radius: 50%;
